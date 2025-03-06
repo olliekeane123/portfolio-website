@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Almari";
+  src: url("assets/fonts/Almarai/Almarai-Light.ttf") format("truetype");
+  font-weight: 300; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Almari";
+  src: url("assets/fonts/Almarai/Almarai-Regular.ttf") format("truetype");
+  font-weight: 400; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Almari";
+  src: url("assets/fonts/Almarai/Almarai-Bold.ttf") format("truetype");
+  font-weight: 500; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Almari";
+  src: url("assets/fonts/Almarai/Almarai-ExtraBold.ttf") format("truetype");
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto_Condensed";
+  src: url("assets/fonts/Roboto_Condensed/static/RobotoCondensed-Light.ttf") format("truetype");
+  font-weight: 300; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto_Condensed";
+  src: url("assets/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400; 
+  font-style: normal;
+}
+
+
+
+:root {
+  font-family: "Roboto_Condensed", Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #272728;
+  background-color: #edeae3;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* #border{
+  position: absolute;
+  width: 100vw;
+} */
+
+/* #border { 
+  position:fixed;  
+  width: 100vw;
+  height: 100vh;
+  margin: 2%; 
+  justify-self: center; 
+  align-self: center; 
+} */
+
+
+#app {
+  width: calc(100vw - 30px);
+  height: calc(100vh - 30px);
+  /* margin: 5px; */
+  max-width: 2560px;
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  text-align: center;
+  /* border: 1px solid #1e1e1e; */
+  display: flex;
+  flex-direction: column;
+  /* mask: url('src/assets/Rectangle 10.svg'); */
+  /* transition: transform 0.5s ease-in-out */
+}
+
+.exit-animation {
+  animation: screen-exit 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+@keyframes screen-exit {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -100%);
+  }
+}
+
+
+/* *********************** Header *********************** */
+#header-section-hidden{
+  display: none;
+}
+#header-section{
+  font-family: "Roboto_Condensed";
+  font-weight: 300;
+  margin: 0.2% 1%;
+  display: flex;
+  justify-content: space-between;
+  transition: opacity 0.5s ease-in-out
+
+}
+#nav-bar{
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+#nav-bar li {
+  cursor: pointer;
+}
+
+/* #time{
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* *********************** Home *********************** */
+#home-section-hidden{
+  display: none;
+}
+#home-section{
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  height: 100%;
+  /* border: 1px solid red */
+}
+
+#home-text-div{
+  font-family: "Almari";
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 2%;
+  /* position: absolute;
+  bottom: 50px;
+  left: 2%;
+  flex-direction: column; */
+  /* border: 1px solid red; */
+}
+/* @media screen and (max-width: 1080px){
+  #home-text-div{
+    left: 4%;
+  }
+} */
+
+#home-name{
+  font-weight: 400;
+  font-size: 3vw;
+  margin-left: 10px;
+}
+
+#home-title{
+  font-weight: 600;
+  font-size: 7vw;
+  border-right: 1px solid #1e1e1e;
+}
+
+/* *********************** About *********************** */
+
+#about-section{
+  display: flex;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-section p {
+  font-family: "Roboto_Condensed";
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+/* *********************** Projects *********************** */
+
+/* *********************** Contact *********************** */

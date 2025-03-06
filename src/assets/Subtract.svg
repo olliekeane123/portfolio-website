@@ -1,0 +1,7 @@
+<svg width="100vw" height="100vh" viewBox="0 0 1084 731" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Fill -->
+  <!-- <rect x="0" y="0" width="1084" height="731" fill="black"/> -->
+
+  <!-- White cutout with a consistent border -->
+  <rect x="15" y="15" width="1054" height="701" fill="white" stroke="black" stroke-width="1" vector-effect="non-scaling-stroke"/>
+</svg>
