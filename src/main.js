@@ -1,18 +1,35 @@
 import "./style.css"
 import { header } from "/src/components/header.js"
+import { sidebar } from "./components/sidebar"
 import { home } from "/src/components/home.js"
 import { about } from "/src/components/about.js"
+import { projects } from "/src/components/projects.js"
 
-const app = document.getElementById("app")
+// const app = document.getSelection("body")
 
-app.innerHTML = /* html */ `
+document.body.innerHTML = /* html */ `
 ${header()}
-${home()}
+${sidebar()}
+<div id="app">
+  ${home()}
+  ${about()}
+  ${projects()}
+</div>
 `
 
-// ${about()}
 
-const headerSection = document.getElementById("header-section")
+
+
+
+
+
+
+
+
+
+
+
+/* const headerSection = document.getElementById("header-section")
 const homeSection = document.getElementById("home-section")
 
 
@@ -29,11 +46,11 @@ const changeSection = (section) => {
         app.style.transform = "scale(1)"
         headerSection.style.opacity = "1"
         homeSection.style.opacity = "1"
-    } */
+    } 
 
 }
 
 document.getElementById("about-button").addEventListener("click", () => {
     changeSection("about")
-})
+}) */
 
