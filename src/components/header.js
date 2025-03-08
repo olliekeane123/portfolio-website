@@ -1,22 +1,33 @@
 export function header() {
     const date = new Date()
     let time = date.toLocaleTimeString().split(/^(\d+:\d+)/)[1]
+    if(time.length === 4){
+        time = '0' + time 
+    }
     return /* html */ `
-    <section id="header-section">
-        <p>OK</p>
+    <header>
+        
+        <p id="logo">OK</p>
         <p id="time">${time}</p>
-        <ul id="nav-bar">
+        <nav id="nav-bar">
             <li id="about-button">about</li>
             <li>projects</li>
             <li>contact</li>
-        </ul>
-    </section>
+        </nav>
+    </header>
     `
+}
+
+function getTime() {
+    return
 }
 
 function updateTime() {
     const date = new Date()
     let time = date.toLocaleTimeString().split(/^(\d+:\d+)/)[1]
+    if(time.length === 4){
+        time = '0' + time 
+    }
     const timeElement = document.getElementById("time")
     if (timeElement) {
         timeElement.textContent = time
